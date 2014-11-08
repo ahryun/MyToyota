@@ -8,11 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		A48663501A0DBD2600C10CB9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A486634F1A0DBD2600C10CB9 /* AppDelegate.swift */; };
-		A48663521A0DBD2600C10CB9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48663511A0DBD2600C10CB9 /* ViewController.swift */; };
 		A48663551A0DBD2600C10CB9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A48663531A0DBD2600C10CB9 /* Main.storyboard */; };
 		A48663571A0DBD2600C10CB9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A48663561A0DBD2600C10CB9 /* Images.xcassets */; };
-		A486635A1A0DBD2600C10CB9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A48663581A0DBD2600C10CB9 /* LaunchScreen.xib */; };
 		A48663661A0DBD2600C10CB9 /* MyToyotaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48663651A0DBD2600C10CB9 /* MyToyotaTests.swift */; };
+		A48663701A0DF57600C10CB9 /* ToyotaListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A486636F1A0DF57600C10CB9 /* ToyotaListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,13 +28,12 @@
 		A486634A1A0DBD2600C10CB9 /* MyToyota.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyToyota.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A486634E1A0DBD2600C10CB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A486634F1A0DBD2600C10CB9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A48663511A0DBD2600C10CB9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A48663541A0DBD2600C10CB9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A48663561A0DBD2600C10CB9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		A48663591A0DBD2600C10CB9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		A486635F1A0DBD2600C10CB9 /* MyToyotaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyToyotaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A48663641A0DBD2600C10CB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A48663651A0DBD2600C10CB9 /* MyToyotaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyToyotaTests.swift; sourceTree = "<group>"; };
+		A486636F1A0DF57600C10CB9 /* ToyotaListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToyotaListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,9 +75,7 @@
 		A486634C1A0DBD2600C10CB9 /* MyToyota */ = {
 			isa = PBXGroup;
 			children = (
-				A486634F1A0DBD2600C10CB9 /* AppDelegate.swift */,
-				A48663511A0DBD2600C10CB9 /* ViewController.swift */,
-				A48663581A0DBD2600C10CB9 /* LaunchScreen.xib */,
+				A486636F1A0DF57600C10CB9 /* ToyotaListViewController.swift */,
 				A486634D1A0DBD2600C10CB9 /* Supporting Files */,
 			);
 			path = MyToyota;
@@ -88,6 +84,7 @@
 		A486634D1A0DBD2600C10CB9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A486634F1A0DBD2600C10CB9 /* AppDelegate.swift */,
 				A48663531A0DBD2600C10CB9 /* Main.storyboard */,
 				A48663561A0DBD2600C10CB9 /* Images.xcassets */,
 				A486634E1A0DBD2600C10CB9 /* Info.plist */,
@@ -193,7 +190,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A48663551A0DBD2600C10CB9 /* Main.storyboard in Resources */,
-				A486635A1A0DBD2600C10CB9 /* LaunchScreen.xib in Resources */,
 				A48663571A0DBD2600C10CB9 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -212,7 +208,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A48663521A0DBD2600C10CB9 /* ViewController.swift in Sources */,
+				A48663701A0DF57600C10CB9 /* ToyotaListViewController.swift in Sources */,
 				A48663501A0DBD2600C10CB9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -242,14 +238,6 @@
 				A48663541A0DBD2600C10CB9 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		A48663581A0DBD2600C10CB9 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A48663591A0DBD2600C10CB9 /* Base */,
-			);
-			name = LaunchScreen.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -338,9 +326,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = MyToyota/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -348,9 +339,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = MyToyota/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -407,6 +401,7 @@
 				A486636B1A0DBD2600C10CB9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A486636C1A0DBD2600C10CB9 /* Build configuration list for PBXNativeTarget "MyToyotaTests" */ = {
 			isa = XCConfigurationList;
@@ -415,6 +410,7 @@
 				A486636E1A0DBD2600C10CB9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
