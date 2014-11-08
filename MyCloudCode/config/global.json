@@ -1,0 +1,11 @@
+{
+    "applications": {
+        "MyToyota": {
+            "applicationId": "scg5KVOF8gDx6BPMDyMi3HZqQlf43HtYjtZzBbNr", 
+            "masterKey": "JF8b2ciLJ8DzJFvPfkcIvrLhYBtpA89UoFN4hGwu"
+        }, 
+        "_default": {
+            "link": "MyToyota"
+        }
+    }
+}
