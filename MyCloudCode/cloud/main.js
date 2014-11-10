@@ -1,42 +1,44 @@
-var userInfoURI = "https://api-jp-t-itc.com/GetUserInfo";
-var vehicleModelListURI = "https://api-jp-t-itc.com/GetVehicleModelList";
-var vehicleSpecURI = "https://api-jp-t-itc.com/GetVehicleSpec";
-var vehicleInfoURI = "https://api-jp-t-itc.com/GetVehicleInfo";
-var mapMatchingVehicleInfoURI = "https://api-jp-t-itc.com/GetVehicleInfoMM";
-var statisticsURI = "https://api-jp-t-itc.com/GetStatisticsInfo";
-var developerKey = '3552b02ecebf';
+var ToyotaAPI = require('cloud/ToyotaAPI.js');
+var Utils = require('cloud/utils.js');
+var Trip  = require('cloud/trip.js');
 
-Parse.Cloud.define("startJourney", function(request, response) {
-  return Parse.Cloud.httpRequest({
-        method: 'POST',
-        url: vehicleInfoURI,
-        params: {
-            developerkey    : developerKey,
-            responseformat  : 'json',
-            vid             : request.vid,
-        },
-        headers: {
-            'Content-Type': 'application/json;charset=utf-8',
-        },
-        success: function(httpResponse) {
-            var query = new Parse.Query(Parse.User);
-            query.get(request.uid, {
-                success: function(user) {
-                    // The object was retrieved successfully.
-                    var Trip = Parse.Object.extend("Trip");
-                    var trip = new Trip();
-                    trip.set();
-                    user.set();
-                },
-                error: function(object, error) {
-                    // The object was not retrieved successfully.
-                    // error is a Parse.Error with an error code and message.
-                }
-            });
-            response.success('Successfully retrieved: ' + httpResponse);
-        },
-        error: function(error) {
-            response.error("Something went wrong in query.... <<<< " + error);
-        },
-  });
+Parse.Cloud.define('getUpdatedCarInfo', function(request, response) {
+    var vid = request.params.vid;
+    ToyotaAPI.getCarFromVID(vid).then(function(car) {
+        console.log('Success in getUpdatedCarInfo.');
+        console.log('Got car: ' + car.get('vid') + ' -- ' + car.get('currentMiles') + ' mi.');
+        response.success(car);
+    },
+    function(error) {
+        console.log('Error in getUpdatedCarInfo.');
+        response.error(Utils.logError(error));
+    });
+});
+
+Parse.Cloud.define('getTripRecords', function(request, response) {
+    var vid = request.params.vid;
+    Trip.getTripRecords(vid).then(function(records) {
+        response.success(records);
+    }, function(error) {
+        response.error('Something went wrong while trying to fetch trip records.');
+    });
+});
+
+Parse.Cloud.define('invitePassenger', function(request, response) {
+    var vid = request.params.vid;
+});
+
+Parse.Cloud.define('joinRide', function(request, response) {
+    var vid = request.params.vid;
+    var uid = request.params.uid;
+});
+
+Parse.Cloud.job('updateAllCars', function(request, status) {
+    Parse.Cloud.useMasterKey();
+    ToyotaAPI.updateCars().then(function(success) {
+        status.success('Finished updating cars.');
+    },
+    function(obj, error) {
+        status.error('There was a problem while trying to update cars.');
+    });
 });
