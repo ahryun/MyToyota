@@ -12,6 +12,27 @@
 		A48663571A0DBD2600C10CB9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A48663561A0DBD2600C10CB9 /* Images.xcassets */; };
 		A48663661A0DBD2600C10CB9 /* MyToyotaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48663651A0DBD2600C10CB9 /* MyToyotaTests.swift */; };
 		A48663701A0DF57600C10CB9 /* ToyotaListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A486636F1A0DF57600C10CB9 /* ToyotaListViewController.swift */; };
+		A4FE71531A0E203C002F1254 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4FE71521A0E203C002F1254 /* AudioToolbox.framework */; };
+		A4FE71551A0E204B002F1254 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4FE71541A0E204B002F1254 /* CFNetwork.framework */; };
+		A4FE71571A0E2054002F1254 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4FE71561A0E2054002F1254 /* CoreGraphics.framework */; };
+		A4FE71591A0E209C002F1254 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4FE71581A0E209C002F1254 /* Parse.framework */; };
+		A4FE715B1A0E20AD002F1254 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4FE715A1A0E20AD002F1254 /* CoreLocation.framework */; };
+		A4FE715D1A0E20B4002F1254 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A4FE715C1A0E20B4002F1254 /* libz.dylib */; };
+		A4FE715F1A0E20BC002F1254 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4FE715E1A0E20BB002F1254 /* MobileCoreServices.framework */; };
+		A4FE71611A0E20C5002F1254 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4FE71601A0E20C5002F1254 /* QuartzCore.framework */; };
+		A4FE71631A0E20CD002F1254 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4FE71621A0E20CD002F1254 /* Security.framework */; };
+		A4FE71651A0E20D4002F1254 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4FE71641A0E20D4002F1254 /* StoreKit.framework */; };
+		A4FE71671A0E20DA002F1254 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4FE71661A0E20DA002F1254 /* SystemConfiguration.framework */; };
+		A4FE71691A0E26CC002F1254 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4FE71681A0E26CC002F1254 /* ParseUI.framework */; };
+		A4FE716B1A0E2714002F1254 /* MyCarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FE716A1A0E2714002F1254 /* MyCarTableViewCell.swift */; };
+		A4FE716E1A0E2CA7002F1254 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4FE716C1A0E2CA7002F1254 /* Bolts.framework */; };
+		A4FE716F1A0E2CA7002F1254 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4FE716D1A0E2CA7002F1254 /* ParseFacebookUtils.framework */; };
+		A4FE71711A0E4607002F1254 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FE71701A0E4607002F1254 /* MapViewController.swift */; };
+		A4FE71731A0E4ADF002F1254 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4FE71721A0E4ADF002F1254 /* MapKit.framework */; };
+		A4FE71751A0E4BAB002F1254 /* GenericVariable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FE71741A0E4BAB002F1254 /* GenericVariable.swift */; };
+		A4FE71771A0E4BD9002F1254 /* GenericFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FE71761A0E4BD9002F1254 /* GenericFunctions.swift */; };
+		A4FE71791A0E4EB6002F1254 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FE71781A0E4EB6002F1254 /* Extensions.swift */; };
+		A4FE717B1A0E5108002F1254 /* MyAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FE717A1A0E5108002F1254 /* MyAccountViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +55,27 @@
 		A48663641A0DBD2600C10CB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A48663651A0DBD2600C10CB9 /* MyToyotaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyToyotaTests.swift; sourceTree = "<group>"; };
 		A486636F1A0DF57600C10CB9 /* ToyotaListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToyotaListViewController.swift; sourceTree = "<group>"; };
+		A4FE71521A0E203C002F1254 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		A4FE71541A0E204B002F1254 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		A4FE71561A0E2054002F1254 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		A4FE71581A0E209C002F1254 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = MyToyota/Frameworks/Parse.framework; sourceTree = "<group>"; };
+		A4FE715A1A0E20AD002F1254 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		A4FE715C1A0E20B4002F1254 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		A4FE715E1A0E20BB002F1254 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		A4FE71601A0E20C5002F1254 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		A4FE71621A0E20CD002F1254 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		A4FE71641A0E20D4002F1254 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		A4FE71661A0E20DA002F1254 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		A4FE71681A0E26CC002F1254 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
+		A4FE716A1A0E2714002F1254 /* MyCarTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCarTableViewCell.swift; sourceTree = "<group>"; };
+		A4FE716C1A0E2CA7002F1254 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		A4FE716D1A0E2CA7002F1254 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
+		A4FE71701A0E4607002F1254 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		A4FE71721A0E4ADF002F1254 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		A4FE71741A0E4BAB002F1254 /* GenericVariable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericVariable.swift; sourceTree = "<group>"; };
+		A4FE71761A0E4BD9002F1254 /* GenericFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericFunctions.swift; sourceTree = "<group>"; };
+		A4FE71781A0E4EB6002F1254 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		A4FE717A1A0E5108002F1254 /* MyAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAccountViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +83,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4FE71731A0E4ADF002F1254 /* MapKit.framework in Frameworks */,
+				A4FE716F1A0E2CA7002F1254 /* ParseFacebookUtils.framework in Frameworks */,
+				A4FE71591A0E209C002F1254 /* Parse.framework in Frameworks */,
+				A4FE71671A0E20DA002F1254 /* SystemConfiguration.framework in Frameworks */,
+				A4FE71651A0E20D4002F1254 /* StoreKit.framework in Frameworks */,
+				A4FE71631A0E20CD002F1254 /* Security.framework in Frameworks */,
+				A4FE71611A0E20C5002F1254 /* QuartzCore.framework in Frameworks */,
+				A4FE715F1A0E20BC002F1254 /* MobileCoreServices.framework in Frameworks */,
+				A4FE71691A0E26CC002F1254 /* ParseUI.framework in Frameworks */,
+				A4FE716E1A0E2CA7002F1254 /* Bolts.framework in Frameworks */,
+				A4FE715D1A0E20B4002F1254 /* libz.dylib in Frameworks */,
+				A4FE715B1A0E20AD002F1254 /* CoreLocation.framework in Frameworks */,
+				A4FE71571A0E2054002F1254 /* CoreGraphics.framework in Frameworks */,
+				A4FE71551A0E204B002F1254 /* CFNetwork.framework in Frameworks */,
+				A4FE71531A0E203C002F1254 /* AudioToolbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,6 +117,7 @@
 				A486634C1A0DBD2600C10CB9 /* MyToyota */,
 				A48663621A0DBD2600C10CB9 /* MyToyotaTests */,
 				A486634B1A0DBD2600C10CB9 /* Products */,
+				A4FE71511A0E2027002F1254 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -76,6 +134,9 @@
 			isa = PBXGroup;
 			children = (
 				A486636F1A0DF57600C10CB9 /* ToyotaListViewController.swift */,
+				A4FE716A1A0E2714002F1254 /* MyCarTableViewCell.swift */,
+				A4FE71701A0E4607002F1254 /* MapViewController.swift */,
+				A4FE717A1A0E5108002F1254 /* MyAccountViewController.swift */,
 				A486634D1A0DBD2600C10CB9 /* Supporting Files */,
 			);
 			path = MyToyota;
@@ -86,6 +147,9 @@
 			children = (
 				A486634F1A0DBD2600C10CB9 /* AppDelegate.swift */,
 				A48663531A0DBD2600C10CB9 /* Main.storyboard */,
+				A4FE71781A0E4EB6002F1254 /* Extensions.swift */,
+				A4FE71741A0E4BAB002F1254 /* GenericVariable.swift */,
+				A4FE71761A0E4BD9002F1254 /* GenericFunctions.swift */,
 				A48663561A0DBD2600C10CB9 /* Images.xcassets */,
 				A486634E1A0DBD2600C10CB9 /* Info.plist */,
 			);
@@ -107,6 +171,28 @@
 				A48663641A0DBD2600C10CB9 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A4FE71511A0E2027002F1254 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A4FE71721A0E4ADF002F1254 /* MapKit.framework */,
+				A4FE716C1A0E2CA7002F1254 /* Bolts.framework */,
+				A4FE716D1A0E2CA7002F1254 /* ParseFacebookUtils.framework */,
+				A4FE71681A0E26CC002F1254 /* ParseUI.framework */,
+				A4FE71661A0E20DA002F1254 /* SystemConfiguration.framework */,
+				A4FE71641A0E20D4002F1254 /* StoreKit.framework */,
+				A4FE71621A0E20CD002F1254 /* Security.framework */,
+				A4FE71601A0E20C5002F1254 /* QuartzCore.framework */,
+				A4FE715E1A0E20BB002F1254 /* MobileCoreServices.framework */,
+				A4FE715C1A0E20B4002F1254 /* libz.dylib */,
+				A4FE715A1A0E20AD002F1254 /* CoreLocation.framework */,
+				A4FE71581A0E209C002F1254 /* Parse.framework */,
+				A4FE71561A0E2054002F1254 /* CoreGraphics.framework */,
+				A4FE71541A0E204B002F1254 /* CFNetwork.framework */,
+				A4FE71521A0E203C002F1254 /* AudioToolbox.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -208,8 +294,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4FE716B1A0E2714002F1254 /* MyCarTableViewCell.swift in Sources */,
 				A48663701A0DF57600C10CB9 /* ToyotaListViewController.swift in Sources */,
+				A4FE717B1A0E5108002F1254 /* MyAccountViewController.swift in Sources */,
+				A4FE71751A0E4BAB002F1254 /* GenericVariable.swift in Sources */,
+				A4FE71771A0E4BD9002F1254 /* GenericFunctions.swift in Sources */,
 				A48663501A0DBD2600C10CB9 /* AppDelegate.swift in Sources */,
+				A4FE71711A0E4607002F1254 /* MapViewController.swift in Sources */,
+				A4FE71791A0E4EB6002F1254 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -327,6 +419,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/MyToyota/Frameworks",
+				);
 				INFOPLIST_FILE = MyToyota/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -340,6 +437,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/MyToyota/Frameworks",
+				);
 				INFOPLIST_FILE = MyToyota/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
