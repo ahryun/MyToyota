@@ -1,5 +1,5 @@
 //
-//  MyAccountViewController.swift
+//  RewardViewController.swift
 //  MyToyota
 //
 //  Created by Jasper Sone on 11/8/14.
@@ -8,19 +8,12 @@
 
 import UIKit
 
-class MyAccountViewController: UIViewController {
+class RewardViewController: UIViewController {
 
-    @IBOutlet weak var userIcon: UIButton!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        println("In function \(__FUNCTION__)")
-        
+
         // Do any additional setup after loading the view.
-        let myIconView = UIImageView(frame: CGRect(x: 20, y: 10, width: 30, height: 30))
-        myIconView.image = UIImage(named: "myIcon")
-        self.userIcon.addSubview(myIconView)
     }
 
     @IBAction func backButtonPressed(sender: AnyObject) {
@@ -28,5 +21,17 @@ class MyAccountViewController: UIViewController {
         println("In function \(__FUNCTION__)")
         
         self.navigationController?.popViewControllerAnimated(true)
+    }
+
+    @IBAction func redeemRewardButtonPressed(sender: AnyObject) {
+        
+        println("In function \(__FUNCTION__)")
+        
+        let alert = UIAlertView()
+        alert.title = "Congrats!"
+        alert.message = "You just redeemed a free oil change"
+        alert.cancelButtonIndex = 0
+        alert.addButtonWithTitle("OK")
+        alert.show()
     }
 }

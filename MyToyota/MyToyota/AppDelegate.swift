@@ -13,11 +13,13 @@ import Parse
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var beacon: ALConfigurationViewController!
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         Parse.setApplicationId("scg5KVOF8gDx6BPMDyMi3HZqQlf43HtYjtZzBbNr", clientKey: "jiZ3baYXZjQmTw6aWRv7wlFZh80NJYVrhwwhSXIh")
+        self.beacon = ALConfigurationViewController()
+        self.beacon.turnonBeacon()
         
         return true
     }
@@ -30,6 +32,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationDidEnterBackground(application: UIApplication) {
         // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+        if self.beacon != nil {
+            self.beacon.turnoffBeacon()
+        }
     }
 
     func applicationWillEnterForeground(application: UIApplication) {

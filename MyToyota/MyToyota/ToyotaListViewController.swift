@@ -17,6 +17,7 @@ class ToyotaListViewController: UIViewController {
     
     var carArray = [PFObject]()
     var selectedCar: PFObject!
+    var user: PFUser!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +31,7 @@ class ToyotaListViewController: UIViewController {
         myIconView.image = UIImage(named: "myIcon")
         self.userIcon.addSubview(myIconView)
         
-//        self.getAllCars()
+        self.getAllCars()
     }
 
     /************************/
@@ -40,15 +41,22 @@ class ToyotaListViewController: UIViewController {
         
         println("In function \(__FUNCTION__)")
         
-        var query = PFQuery(className: "Car")
-        query.whereKey("user", equalTo: PFUser.currentUser())
-        query.findObjectsInBackgroundWithBlock {
-            (cars: [AnyObject]!, err: NSError!) -> Void in
-            if (err == nil) {
-                self.carArray = cars as [PFObject]
-                self.carsTableView.reloadData()
+        var userQuery = PFUser.query()
+        userQuery.getObjectInBackgroundWithId("gmUoEDCUFX", block: {
+            (object: AnyObject!, err: NSError!) -> Void in
+            if err == nil {
+                self.user = object as PFUser
+                var query = PFQuery(className: "Car")
+                query.whereKey("owner", equalTo: object as PFUser)
+                query.findObjectsInBackgroundWithBlock {
+                    (cars: [AnyObject]!, err: NSError!) -> Void in
+                    if (err == nil) {
+                        self.carArray = cars as [PFObject]
+                        self.carsTableView.reloadData()
+                    }
+                }
             }
-        }
+        })
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -57,7 +65,7 @@ class ToyotaListViewController: UIViewController {
         
         if segue.identifier == "ShowMap" {
             var destController: MapViewController = segue.destinationViewController as MapViewController
-            destController.mappedCar = self.selectedCar
+            destController.getCar(vid: self.selectedCar["vid"] as String)
         }
     }
 }

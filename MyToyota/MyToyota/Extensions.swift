@@ -31,3 +31,13 @@ extension UIView {
         self.layer.addAnimation(group, forKey: "pulsingAnimation")
     }
 }
+
+extension UIImageView {
+    func maskInCircle() {
+        let circle: UIBezierPath = UIBezierPath(ovalInRect: self.bounds)
+        var shapeLayer: CAShapeLayer = CAShapeLayer()
+        shapeLayer.path = circle.CGPath
+        shapeLayer.frame = self.bounds;
+        self.layer.mask = shapeLayer;
+    }
+}

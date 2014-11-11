@@ -24,11 +24,23 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         println("In function \(__FUNCTION__)")
 
         // Do any additional setup after loading the view.
-        var model = self.mappedCar["model"] as String
-        var year = self.mappedCar["year"] as String
-        self.navBarItem.title = "\(model) \(year)".uppercaseString
         
-        self.setUpMapPin()
+    }
+    
+    func getCar(#vid: String) {
+        
+        println("In function \(__FUNCTION__)")
+        
+        PFCloud.callFunctionInBackground("getUpdatedCarInfo", withParameters: ["vid": vid], block: {
+            (updatedCar: AnyObject!, err: NSError!) -> Void in
+            if err == nil {
+                self.mappedCar = updatedCar as PFObject
+                var model = self.mappedCar["model"] as String
+                var year = self.mappedCar["year"] as NSNumber
+                self.navBarItem.title = "\(model) \(year)".uppercaseString
+                self.setUpMapPin()
+            }
+        })
     }
 
     @IBAction func exitButtonPressed(sender: AnyObject) {
@@ -87,7 +99,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         self.mapView.addAnnotation(annotation)
         
         let annotationPoint: MKMapPoint = MKMapPointForCoordinate(annotation.coordinate);
-        let pointRect: MKMapRect = MKMapRect(origin: annotationPoint, size: MKMapSize(width: 0.1, height: 0.1))
+        let pointRect: MKMapRect = MKMapRect(origin: annotationPoint, size: MKMapSize(width: 1, height: 1))
         weak var weakSelf = self
         self.mapView.delegate = weakSelf
         self.mapView.setVisibleMapRect(pointRect, animated: false)
@@ -145,7 +157,7 @@ class MapPin : NSObject, MKAnnotation {
         println("In function \(__FUNCTION__)")
         
         let anAnnotationView: MKAnnotationView = MKAnnotationView(annotation: self, reuseIdentifier: "mapPinID")
-        anAnnotationView.frame = CGRect(origin: CGPointZero, size: CGSize(width: 60.0, height: 60.0))
+        anAnnotationView.frame = CGRect(origin: CGPointZero, size: CGSize(width: 20.0, height: 20.0))
         let imageView = UIImageView(frame: anAnnotationView.bounds)
         imageView.image = UIImage(named: "greenCircle")
         anAnnotationView.addSubview(imageView)
@@ -187,6 +199,7 @@ class PulsingMapPin : MapPin {
         println("In function \(__FUNCTION__)")
         
         let anAnnotationView: MKAnnotationView = MKAnnotationView(annotation: self, reuseIdentifier: "mapPinID")
+        anAnnotationView.frame = CGRect(origin: CGPointZero, size: CGSize(width: 60.0, height: 60.0))
         anAnnotationView.image = UIImage(named: "greenCircle")
         anAnnotationView.tag = 1
         anAnnotationView.pulse()
